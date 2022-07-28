@@ -19,11 +19,11 @@
                                 {% else %}
                                 <img class="card-img" src=" {{ post.featured_image.url }}">
                                 <div class="card-img-overlay text-white d-flex flex-column justify-content-end">
-                                    <a href="{% url 'post_detail' post.slug  %}" class="post-link">
-                                        <h2 class="card-title">{{ post.title }}</h2>
-                                        <p class="card-text">{{ post.excerpt }}</p>
-                                        <p class="author">Author: {{ post.author }}</p>
-                                    </a>
+                                        <h2 class="card-title card-content-style">{{ post.title }}</h2>
+                                        <p class="card-text card-content-style">{{ post.excerpt }}</p>
+                                        <p class="author card-content-style">Author: {{ post.author }}</p>
+                                        <a href="{% url 'post_detail' post.slug  %}" class="card-content-style button">Read More &rarr;</a>
+                                    
                                 </div>
                                 {% endif %}
                                 <div class="image-flash">
