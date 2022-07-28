@@ -5,13 +5,30 @@ span {
 body {
     font-family: "Roboto", sans-serif;
     font-size: 18px;
-    background-color: #fdfdfd;
+    background-color:#A3A3A1;
 }
 
 .head_text {
     color: white;
 }
 
-.card {
-    box-shadow: 0 16px 48px #E3E7EB;
+
+.image-container {
+    position: relative;
 }
+
+
+
+.card-img-overlay {
+    background-color: rgba(#000, 0.3);
+  }
+
+a > h2 {
+    color:#E49273;
+    text-shadow:1px 1px 1px black;
+}
+a > p {
+    color:#E49273;
+    text-shadow:1px 1px 1px black;
+}
+
