@@ -24,7 +24,7 @@
                                         <p class="author card-content-style">Author: {{ post.author }}</p>
                                         <a href="{% url 'post_detail' post.slug  %}" class="card-content-style button">Read More &rarr;</a>
                                         <hr>
-                                        <p id="likes"><i class="far fa-heart"></i>
+                                        <p id="likes" class="card-content-style" ><i class="far fa-heart"></i>
                                             {{ post.number_of_likes }}</p>
                                 </div>
                                 
