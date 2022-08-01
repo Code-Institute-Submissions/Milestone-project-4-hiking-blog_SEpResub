@@ -9,7 +9,7 @@
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for post in post_list %}
-                <div class="col-md-4">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
                     <div class="card mb-4">
                         <div >
                             <div class="image-container">
@@ -23,7 +23,7 @@
 
                                         <p class="author card-content-style">Author: {{ post.author }}</p>
                                         <a href="{% url 'post_detail' post.slug  %}" class="card-content-style button">Read More &rarr;</a>
-                                        <hr>
+                                    
                                         <p id="likes" class="card-content-style" ><i class="far fa-heart"></i>
                                             {{ post.number_of_likes }}</p>
                                 </div>
