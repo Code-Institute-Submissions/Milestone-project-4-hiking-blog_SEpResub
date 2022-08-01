@@ -60,6 +60,8 @@ h2 {
     border-radius: 5px;
     padding: 2px 2px 2px 5px;
     width: 150px;
+    margin-bottom: 10px;
+
 }
 
 .button:hover {
@@ -69,5 +71,7 @@ h2 {
 .post-detail-image {
     border-radius: 20px;
 }
+
+
 
 
