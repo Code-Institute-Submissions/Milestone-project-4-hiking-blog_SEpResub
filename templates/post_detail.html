@@ -3,20 +3,17 @@
 
 <div class="masthead">
     <div class="container">
-        <div class="row g-0 mt-3 top">
+        <div class="row g-0">
             <div class="col-md-12 col-lg-6 masthead-text d-flex flex-column justify-content-center">
                 <!-- Post title goes in these h1 tags -->
                 <h1 class="post-title">{{ post.title }}</h1>
                 <!-- Post author goes before the | the post's created date goes after -->
                 <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
             </div>
-            <div class="d-none d-md-block col-md-12 col-lg-6 masthead-image">
+            <div class="d-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
-                {% if "placeholder" in post.featured_image.url %}
-                <img src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg" width="100%">
-                {% else %}
-                <img class="post-detail-image img-fluid max-width:100%;" src=" {{ post.featured_image.url }}">
-                {% endif %}
+                <img class="d-block w-100 img-fluid" src=" {{ post.featured_image.url }}">
+
             </div>
             
            
