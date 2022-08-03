@@ -3,7 +3,10 @@ from .forms import CommentForm
 # Create your tests here.
 
 
-class test(self):
+class HikeBlogTest(TestCase):
 
-    def test_if_works(self):
-        self.assertEqual(1, 1)
+    def test_home_view(self):
+        """This checks the home view page has loaded correctly"""
+        res = self.client.get('/home/')
+        assert b'Top Hikes in Chile' in res.content
+        assert b'Welcome to HikeIt' in res.content
