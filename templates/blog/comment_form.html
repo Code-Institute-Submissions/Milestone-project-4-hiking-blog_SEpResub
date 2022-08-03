@@ -1,0 +1,12 @@
+
+{% extends 'base.html' %} 
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+<form method="post" action="{% url 'comment_update' comment.pk %}" style="margin-top: 1.3em;">
+    {{ form | crispy }}
+    {% csrf_token %}
+    <button type="submit" class="btn btn-signup btn-lg">Confirm the changes</button>
+</form>
+{% endblock content %}
