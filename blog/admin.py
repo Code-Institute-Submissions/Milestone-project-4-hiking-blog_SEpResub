@@ -21,6 +21,6 @@ class PostAdmin(SummernoteModelAdmin):
     actions = ['approve_comments']
 
     def approve_comments(self, request, queryset):
-        queryset.update(active=True)
+        queryset.update(approved=True)
 
 

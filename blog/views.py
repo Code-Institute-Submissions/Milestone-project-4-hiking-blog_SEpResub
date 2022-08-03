@@ -1,7 +1,12 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
+from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
 from django.http import HttpResponseRedirect
 from .models import Post
+from .models import Comment
 from .forms import CommentForm
 
 
@@ -9,7 +14,6 @@ class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'index.html'
-
 
 
 class PostDetail(View):
@@ -21,7 +25,6 @@ class PostDetail(View):
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
-
 
         return render(
             request,
@@ -43,7 +46,7 @@ class PostDetail(View):
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
 
-        comment_form =CommentForm(data=request.POST)
+        comment_form = CommentForm(data=request.POST)
 
         if comment_form.is_valid():
             comment_form.instance.email = request.user.email
@@ -67,6 +70,19 @@ class PostDetail(View):
         )
 
 
+class CommentUpdateView(UpdateView):
+    """View to update a comment"""
+    model = Comment
+    fields = '__all__'
+    success_url = reverse_lazy('home')
+
+
+class CommentDeleteView(DeleteView):
+    """View to delete a comment"""
+    model = Comment
+    fields = '__all__'
+    success_url = reverse_lazy('home')
+
 
 class PostLike(View):
     
@@ -78,3 +94,5 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+

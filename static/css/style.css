@@ -5,11 +5,11 @@
 body {
     font-family: "Roboto", sans-serif;
     font-size: 18px;
-
+    background-color: #E2FDFF;
     color: white;
 }
 nav {
-    background-color: #E2FDFF;
+    background-color: #1B2C37;
 }
 
 footer {
