@@ -4,8 +4,24 @@
 
 {% load crispy_forms_tags %}
 
-            <form method="POST">
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-8  card mb-4  mt-3 ">
+                    <div class="card-body">
+                      <h1>Are You sure You want to delete this comment!</h1>
+              
+              
+              <p>These changes are permanent and cannot be undone.</p>
+              
+              <form method="POST">
                 {% csrf_token %}
                     <button type="submit" class="btn btn-danger">Delete</button>
             </form>
+
+         
+                        </div>
+                    </div>
+                </div>
+              </div>
+              
 {% endblock content %}
