@@ -8,7 +8,9 @@ About the project...
 
 ## User Experience
 
- - Target Audience 
+ - Purpose of the blog
+
+ - Target Audience and persona
 
    - target audience goes here.
 
@@ -18,6 +20,9 @@ About the project...
   - As a user I want clear instructions.
   - As a user I want the screen to look clean.
   - As a user I want to try again if I die.
+
+
+## Agile Methodology
 
 
 ## The Design of the Game.
