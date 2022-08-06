@@ -17,6 +17,8 @@ nav {
     background-color: #1B2C37;
     position: fixed;
 }
+
+
 ul {
     float:right;
 }
@@ -118,7 +120,7 @@ p {
     padding: 2px 2px 2px 5px;
     width: 150px;
     margin-bottom: 10px;
-    background-color: none;
+
 
 }
 
@@ -140,3 +142,6 @@ button {
     padding-right: 3%;
 }
 
+.form-control {
+    margin-bottom: 10px;
+}
