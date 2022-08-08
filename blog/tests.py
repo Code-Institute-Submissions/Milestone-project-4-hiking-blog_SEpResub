@@ -1,5 +1,6 @@
 from django.test import TestCase
-from .forms import CommentForm
+from blog.models import Post
+# import .templates
 # Create your tests here.
 
 

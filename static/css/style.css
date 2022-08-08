@@ -10,9 +10,9 @@ body {
     font-size: 18px;
     background-color: #E2FDFF;
     color: white;
-
-    height:100%;
+    min-height:100vh;
 }
+
 nav {
     background-color: #1B2C37;
     position: fixed;
@@ -36,18 +36,23 @@ ul {
     background-color: none;
 
 }
+.page-height {
+    min-height: calc(100vh - 60px);
+}
+.card-body {
+    height: 400px;
+}
 
 
 footer {
 
-    height: auto;
+    height:60px;
     bottom: 0;
     left: 0;
     width: 100%;
     background-color: #1B2C37;
     color: white;
     z-index: 1;
-
 }
 
 a {
