@@ -17,7 +17,9 @@ nav {
     background-color: #1B2C37;
     position: fixed;
 }
-
+.navbar-collapse {
+    flex-grow: 0;
+}
 
 ul {
     float:right;
@@ -150,3 +152,4 @@ button {
 .form-control {
     margin-bottom: 10px;
 }
+
