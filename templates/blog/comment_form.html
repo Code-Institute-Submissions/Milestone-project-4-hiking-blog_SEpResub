@@ -6,10 +6,9 @@
 
 
 
-
+<div class=" page-height">
 <div class="row page-height">
-    <div class="col-lg-4 col-md-6 col-sm-8  card mb-4  mt-3 ">
-        <div class="card-body">
+    <div class="col-lg-4 col-md-6 col-sm-8 mb-4 ml-3 card mt-3 ">
             <form method="post" action="{% url 'comment_update' comment.pk %}" style="margin-top: 1.3em;">
                 {{ form | crispy }}
                 {% csrf_token %}
@@ -17,8 +16,8 @@
             </form>
 
 
-            </div>
+            
         </div>
     </div>
-  </div>
+</div>
 {% endblock content %}

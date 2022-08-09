@@ -27,7 +27,7 @@
 <div class="container">
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
-            <div class="card-body">
+            <div class="card-post-detail">
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
                 <p class="card-text ">
@@ -72,7 +72,7 @@
     <div class="row">
         <div class="col-md-8 card mb-4  mt-3 ">
             <h3>Comments:</h3>
-            <div class="card-body">
+            <div class="card-post-detail">
                 <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
                 {% for comment in comments %}
                 <div class="comments" style="padding: 10px;">
@@ -101,7 +101,7 @@
             </div>
         </div>
         <div class="col-md-4 card mb-4 mt-3 ">
-            <div class="card-body">
+            <div class="card-post-detail">
                 <!-- For later -->
                 {% if commented %}
                 <div class="alert alert-success {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
