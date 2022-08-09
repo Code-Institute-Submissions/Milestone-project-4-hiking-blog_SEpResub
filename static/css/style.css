@@ -182,6 +182,7 @@ body {
 button {
     border: none;
     background-color:#1B2C37;
+    color: white;
 }
 
 .update-delete-comment {
