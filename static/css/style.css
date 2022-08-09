@@ -167,7 +167,9 @@ body {
 
 
 }
-
+.btn-like {
+    background-color:#96DDED;
+}
 .post-detail-image {
     border-radius: 20px;
     box-shadow: 1px 5px 25px 1px black;
