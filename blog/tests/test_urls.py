@@ -15,10 +15,7 @@ class TestUrls(SimpleTestCase):
         print(resolve(url))
         self.assertEquals(resolve(url).func.view_class, AboutView)
 
-    def test_PostDetail_url_resolves(self):
-        url = reverse('post_detail', args=['slug'])
-        print(resolve(url))
-        self.assertEquals(resolve(url).func.view_class, PostDetail)
+
 
 
 
