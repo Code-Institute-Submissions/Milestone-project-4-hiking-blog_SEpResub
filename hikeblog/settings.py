@@ -158,11 +158,7 @@ STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# CLOUDINARY_STORAGE = {
-# 'CLOUD_NAME': os.environ.get('CLOUDINARY_CLOUD_NAME'),
-# 'API_KEY': os.environ.get('CLOUDINARY_API_KEY'),
-# 'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET'),
-# }
+
 
 
 

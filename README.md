@@ -29,6 +29,7 @@ HikeIt is a blog for hikers and adventures people who likes to travel and would 
 
 ## Agile Methodology
 
+- When developing this webapplication I used Agile Methodology. I planned my work based on user stories and a project board where I gave them a status of todo, in progress or done. All this was made in GitHub projects. During this project I had a tight deadline and when we work with agile as methodology we never comprimise time or quality but the scope. The features I did not get to do now I added as "future features" in the project board. Check it out here: https://github.com/users/EmanuelGustafzon/projects/4/views/1.
 
  ## Features
 
@@ -39,7 +40,22 @@ HikeIt is a blog for hikers and adventures people who likes to travel and would 
 
   ## Technologies
 
-- techmologies goes here. languages, frameworks, databases, tools nd deployment services.
+- Languages used
+ - HTML 5
+ - CSS 3
+ - Javascript
+ - Python
+ - PostgreSQL
+ - LiteSQL
+
+ - Frameworks used
+ - Bootstrap
+ - Django
+
+- Other technologies
+ - Git
+ - GitHub
+ - Heroku
 
 
   ## Testing 
@@ -60,7 +76,71 @@ HikeIt is a blog for hikers and adventures people who likes to travel and would 
 
   ## Deployment 
 
-- deployment goes here.
+Initial Deployment:
+
+- Step One, install django and packages with these commands:
+  - pip3 install 'django<4' gunicorn
+  - pip install dj_database_url psycopg2
+  - pip3 install dj3-cloudinary-storage
+  - pip3 freeze --local > requirements.txt
+  - django-admin startproject "project_name".
+  - python3 manage.py startapp "app_name"
+  - pip3 install django-crispy-forms
+  - Migrate the work using:
+    - python3 manage.py makemigrations --dry-run
+    - python3 manage.py makemigrations
+    - python3 manage.py migrate --plan
+    - python3 manage.py migrate
+  - Now, type the commend python3 manage.py runserver to see the preview It should say that django installed successfully.
+
+- Env.py file. 
+  - Add Cloudinary API variable, postgres DATABASE_URL and SECRET_KEY.
+  - Make sure env.py is in the gitignore-file
+  - Commit all changes to GitHub.
+    - git add .
+    - git commit -m "commit message."
+    - git push
+
+- Set up delpoyment with Heroku:
+  - Register and login to Heroku.
+  - Create an app with a unique name and choose the region that is closest to you, USA or Europe.
+  - In Heroku/app/resources add postgres and attach it to the database url.
+  - Under Settings-> Config vars:
+    - I used Cloudinary to store images so I added my personal Cloudniery API variable.
+    - add DISABLE_COLLECTSTATIC, this is to prevent accidentally showing debug messages while DEBUG is True in settings.py
+    - Add port 8000
+    - Add SECRET_KEY from the env.py file.
+  - Under Deploy choose deployment methods Github and search for my repo.
+  - The branch to deploy should be set to main.
+  - Deploy branch
+
+
+- Login to Heroku in terminal if needed.
+  - heroku login -i
+   - Provide Heroku username, email and password.
+  - heroku run python3 manage.py migrate --app APP_NAME
+
+- The usage of two databases.
+ - For this project I used PostgrSQL as the satabase for deployment but when I did the automatic testings I needed to use djangos default database, LiteSQL.
+ 
+  - Create an if else statement for the databases:
+   - if 'DEVELOPMENT' in os.environ:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+else:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    }
+ - Set DEBUG = 'DEVELOPMENT' in os.environ
+- In env.py add os.environ['DEVELOPMENT'] = 'True'
+- Migrate those changes and push them to github.
+- Remove DISABLE_COLLECTSTATIC in heroku config vars.
+
+
 
   ## Credits 
 - credits goes here.
