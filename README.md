@@ -145,6 +145,7 @@ HikeIt is a blog for hikers and adventures people who likes to travel and would 
 ![Lighthouse test](/assets/images/IMG-2453.PNG)
 
  - The blog is validated by jigsaw.w3.org, validator.w3.org and pep8.
+ - OBS: In the HTML validator for the detail page there is two errors but it is not my code but the code from django when a blogpost is created from the admin penal.
 
  - Manuel testing was done:
    - Test all links.
