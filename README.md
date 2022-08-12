@@ -59,7 +59,7 @@ HikeIt is a blog for hikers and adventures people who likes to travel and would 
 
  ![feature update comment](/assets/images/IMG-2442.jpg)
  ![feature update and delete comments](/assets/images/IMG-2443.jpg)
- ![feature confirm delete comment](/assets/images/IMG-2445.jpg)
+ ![feature confirm delete comment](/assets/images/Sk%C3%A4rmbild%20(180).png)
 
    - login, out register
 
@@ -140,20 +140,25 @@ HikeIt is a blog for hikers and adventures people who likes to travel and would 
 
 
   ## Testing 
+ - Chrome developer tool was used to check the accessibility etc. 
+ ![chrome developer tool result lighthouse](/assets/images/Sk%C3%A4rmbild%20(179).png)
 
- - All the testing goes here.
+ - The blog is validated by jigsaw.w3.org, validator.w3.org and pip8.
 
-  ## Bugs 
+ - Manuel testing was done:
+   - Test all links.
+   - Test like button
+   - Test Comment field
+     - User need to be logged in to comment
+     - Comments needs to be approved.
+     - User can edit and delete their own comments but not somebody elses.
+   - Test signup form
+   - Test Login form
+   - Test Logout form.
 
-- Solved
-  - solved goes here
-  
-- Unsolved
-  - unsolved bugs goes here
 
-  ## Other Featured that can be implemented
-   
-- improvements of code goes here.
+
+
 
   ## Deployment 
 
