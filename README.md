@@ -2,10 +2,6 @@
 HikeIt is a blog for hikers and adventures people who likes to travel and would like to get up and see the amazing views from different mountains around the world. The blog is designed to inspire and inform about hiking. The content covers tips and practical information for hiking in general and different specific places. The users are also supposed to engage with the blog. That is why the users can like and comment the different posts so that they can share useful information and show other users and the administrator what content they like.
 ## Site link goes here.
 
-## Site Owner Goals
-
-  - Right site owner goals here
-
 ## Design Thinking
 
  - Purpose of the blog
@@ -14,48 +10,133 @@ HikeIt is a blog for hikers and adventures people who likes to travel and would 
  - Persona.
    - let us dive into the projects persona. The persona is named Stephanie, She is 26 years old and is working full time with a quit good salary. She is single and cannot be still for to long. She likes adventures and to discover new places. She works to save money for her next trip because she loves travelling and she wants to discover the world as much as she can before she sattle down and having a family. 
 
-   - The design.
-     - When I designed this blog I wanted it to look inspiring, trustworthy and playful. I thought that those factors where key thing for the persona Stephanie to like the page. I choosed the typography Kalam as it looks handwritten and playful. I styled the cards and images with round corners and a dropshadow to create that same effect. I choosed blue colors as I think they are soft and give the user an inpression of trustworthyness and seriousness but in the same time the colors really fit the style. The images are unique and not from the intrenet as I think that is the kind of images that gives character and can inspire the user.
+ - The design.
+   - When I designed this blog I wanted it to look inspiring, trustworthy and playful. I thought that those factors where key thing for the persona Stephanie to like the page. I choosed the typography Kalam as it looks handwritten and playful. I styled the cards and images with round corners and a dropshadow to create that same effect. I choosed blue colors as I think they are soft and give the user an inpression of trustworthyness and seriousness but in the same time the colors really fit the style. The images are unique and not from the intrenet as I think that is the kind of images that gives character and can inspire the user.
 
    ## User Experience
 
 - User stories
 
-  - As a user I want the game to go slow so I have time to read.
-  - As a user I want clear instructions.
-  - As a user I want the screen to look clean.
-  - As a user I want to try again if I die.
+  - As an Administrator I can create drafts so that I can finish the content later.
+  - As a User I can Update Comments so that I can Correct something that is wrong.
+  - As a Administrator I can create, edit and delete posts so that I can **manage the blog's content **
+  - As a User I can Delete comments so that I can change my mind about a comment.
+  - As a Admin I can approve and disapprove comments so that I can Get rid of spam comments.
+  - As a User I can view posts so that I can read the content
+  - As a User I can view other users comments so that I can hear other users point of view.
+  - As a User I can view how many likes a post have so that I can see what content other users likes.
+  - As a User I can register an account and login so that I can like and comment posts.
+  - As a User I can Comment on the posts so that I can Share my experience and inputs with the community
+  - As a User I can Like posts so that I can Share ith the community what kind of content I enjoy.
+
+- UX Improvements
+  - At the moment a user cannot search in the blog. This can result to poor user experience as it can be hard for the user to find a specific content.
+  - When a user wants to delete or update a commet thet get redirected to the home page and not the previous slug they came from. This couses confusion because it is hard to know if the comment really updated or got deleted. 
 
 
 ## Agile Methodology
 
 - When developing this webapplication I used Agile Methodology. I planned my work based on user stories and a project board where I gave them a status of todo, in progress or done. All this was made in GitHub projects. During this project I had a tight deadline and when we work with agile as methodology we never comprimise time or quality but the scope. The features I did not get to do now I added as "future features" in the project board. Check it out here: https://github.com/users/EmanuelGustafzon/projects/4/views/1.
 
- ## Features
+ ## Blog Features 
 
-    - all the features goes here
+    - Responsive navigation 
 
- ![feature xxx](/images goes here)
+ ![feature nav desktop](/assets/images/IMG-2447.jpg)
+ ![feature nav mobile](/assets/images/IMG-2446.jpg)
 
+ - Comment section
+
+   - comment not signed in
+
+ ![feature comment not signed in](/assets/images/IMG-2435.jpg)
+
+   - comment wait approvel
+
+ ![feature comment wait approval](/assets/images/IMG-2441.jpg)
+
+  - delete update comments
+
+ ![feature update comment](/assets/images/IMG-2442.jpg)
+ ![feature update and delete comments](/assets/images/IMG-2443.jpg)
+ ![feature confirm delete comment](/assets/images/IMG-2445.jpg)
+
+   - login, out register
+
+ ![feature sign out](/assets/images/IMG-2444.jpg)
+ ![feature sign up](/assets/images/IMG-2439.jpg)
+ ![feature sign in](/assets/images/IMG-2440.jpg)
+ 
+
+   - Home Page
+
+ ![feature Home page](/assets/images/IMG-2436.jpg)
+
+   - Detail Page
+
+ ![feature Detail page](/assets/images/IMG-2434.jpg)
+
+  - About page
+
+ ![feature About page](/assets/images/IMG-2438.jpg)
+
+   - pegnation
+
+ ![feature pegnation next](/assets/images/IMG-2437.jpg)
+ ![feature pegnation prev](/assets/images/IMG-2433.jpg)
+
+ ## Admin Features 
+
+   - post
+
+ ![feature post](/assets/images/Sk%C3%A4rmbild%20(174).png)
+ ![feature post](/assets/images/Sk%C3%A4rmbild%20(175).png)
+ ![feature post](/assets/images/Sk%C3%A4rmbild%20(176).png)
+ 
+
+   - comment
+
+ ![feature post](/assets/images/Sk%C3%A4rmbild%20(177).png)
+
+   - people access to admin panal.
+
+ ![feature post](/assets/images/Sk%C3%A4rmbild%20(178).png)
 
   ## Technologies
 
 - Languages used
- - HTML 5
- - CSS 3
- - Javascript
- - Python
- - PostgreSQL
- - LiteSQL
+  - HTML 5
+  - CSS 3
+  - Javascript
+  - Python
 
- - Frameworks used
- - Bootstrap
- - Django
+- Databases
+  - Postgresql
+    - As database in Heroku
+  - SQLite
+    - Used for automatic tests.
 
-- Other technologies
- - Git
- - GitHub
- - Heroku
+- Frameworks
+  - Bootstrap
+  - Django
+
+- Django Extentions
+  - Allauth
+  - Summernote
+  - Django-Crispyforms
+  - Django-Copyright
+
+- Tools for design
+ - Coolors
+ - Font Awsome
+ - Google Fonts
+
+
+Cloud storage and deployment services
+
+    Cloudinary
+    Heroku
+    Gunicorn
 
 
   ## Testing 
@@ -140,7 +221,9 @@ else:
 - Migrate those changes and push them to github.
 - Remove DISABLE_COLLECTSTATIC in heroku config vars.
 
-
-
   ## Credits 
-- credits goes here.
+- The documentation from Code Institute
+- DjangoCentral https://djangocentral.com/building-a-blog-application-with-django/
+- Medium.com https://towardsdatascience.com/build-a-django-crud-app-by-using-class-based-views-12bc69d36ab6
+- StackOverFlow
+- Bootsrtap Documentation https://getbootstrap.com/docs/5.0/getting-started/introduction/
