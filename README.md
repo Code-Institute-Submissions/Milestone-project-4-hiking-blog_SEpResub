@@ -47,21 +47,21 @@ HikeIt is a blog for hikers and adventures people who likes to travel and would 
 
  - Comment section
 
-   - comment not signed in
+   - commentsection when the user is not signed in.
 
  ![feature comment not signed in](/assets/images/IMG-2435.jpg)
 
-   - comment wait approvel
+   - comment wait approvel message comes up after you comment on a post.
 
  ![feature comment wait approval](/assets/images/IMG-2441.jpg)
 
-  - delete update comments
+  - The user can delete and update their own comments.
 
  ![feature update comment](/assets/images/IMG-2442.jpg)
  ![feature update and delete comments](/assets/images/IMG-2443.jpg)
  ![feature confirm delete comment](/assets/images/Sk%C3%A4rmbild%20(180).png)
 
-   - login, out register
+   - User login, logout and register form
 
  ![feature sign out](/assets/images/IMG-2444.jpg)
  ![feature sign up](/assets/images/IMG-2439.jpg)
@@ -80,27 +80,28 @@ HikeIt is a blog for hikers and adventures people who likes to travel and would 
 
  ![feature About page](/assets/images/IMG-2438.jpg)
 
-   - pegnation
+   - pegnation with 6 posts on each page.
 
  ![feature pegnation next](/assets/images/IMG-2437.jpg)
  ![feature pegnation prev](/assets/images/IMG-2433.jpg)
 
  ## Admin Features 
 
-   - post
+   - post a blog post from admin pannel.
 
- ![feature post](/assets/images/Sk%C3%A4rmbild%20(174).png)
- ![feature post](/assets/images/Sk%C3%A4rmbild%20(175).png)
- ![feature post](/assets/images/Sk%C3%A4rmbild%20(176).png)
+ ![feature post](/assets/images/IMG-2449.PNG)
+ ![feature post](/assets/images/IMG-2450.PNG)
+
+
  
 
-   - comment
+   - Approve and delete comments.
 
- ![feature post](/assets/images/Sk%C3%A4rmbild%20(177).png)
+![feature comment approve](/assets/images/IMG-2451.PNG)
 
-   - people access to admin panal.
+   - Here The admin can control who has access to the admin page.
 
- ![feature post](/assets/images/Sk%C3%A4rmbild%20(178).png)
+![feature post](/assets/images/IMG-2452.PNG)
 
   ## Technologies
 
@@ -141,7 +142,7 @@ HikeIt is a blog for hikers and adventures people who likes to travel and would 
 
   ## Testing 
  - Chrome developer tool was used to check the accessibility etc. 
- ![chrome developer tool result lighthouse](/assets/images/Sk%C3%A4rmbild%20(179).png)
+![Lighthouse test](/assets/images/IMG-2453.PNG)
 
  - The blog is validated by jigsaw.w3.org, validator.w3.org and pip8.
 
@@ -156,9 +157,19 @@ HikeIt is a blog for hikers and adventures people who likes to travel and would 
    - Test Login form
    - Test Logout form.
 
+- Automatic Testing
+  - This is an area that needs to improve but four tests is done.
+    - Test home page url and view
+    - Test about page url and view.
 
+  ## Future Developments.
 
+- As I wrote in the ux section, Searchbar is one feature that should be added in the future as well as the user should land on the same slug after deleting or updating comment.
+- As this is a blog the Search Engine Optimization need to improve. A sitemap should be added, more relavant keyword and the performance of the page.
 
+  ## Bugs along the way.
+
+- One major bug that I had was to set up for the automatic tests. The problem was that the tests needed to be done while connected to SQLite and not PostgreSQL. One way to solve this was to use the SQLite database when developing and PostgreSQL for the deployed site. This could be done with a if else statement in settings.py
 
   ## Deployment 
 
