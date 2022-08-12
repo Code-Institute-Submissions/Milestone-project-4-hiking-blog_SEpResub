@@ -144,7 +144,7 @@ HikeIt is a blog for hikers and adventures people who likes to travel and would 
  - Chrome developer tool was used to check the accessibility etc. 
 ![Lighthouse test](/assets/images/IMG-2453.PNG)
 
- - The blog is validated by jigsaw.w3.org, validator.w3.org and pip8.
+ - The blog is validated by jigsaw.w3.org, validator.w3.org and pep8.
 
  - Manuel testing was done:
    - Test all links.
