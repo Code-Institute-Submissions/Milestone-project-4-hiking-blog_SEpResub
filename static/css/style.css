@@ -41,8 +41,6 @@ ul {
     padding: 10px 50px 10px 50px;
     width: 150px;
     margin-bottom: 10px;
-    background-color: none;
-
 }
 .page-height {
     min-height: calc(100vh - 60px);
@@ -109,9 +107,7 @@ i {
 .card {
     position: relative;
     display: flex;
-    opacity: 0.;
     flex-direction: column;
-    min-width: 0;
     word-wrap: break-word;
     background-color: #96DDED;
     box-shadow: 1px 5px 25px 1px black;

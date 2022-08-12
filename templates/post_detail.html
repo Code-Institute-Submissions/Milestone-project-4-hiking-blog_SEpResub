@@ -110,7 +110,7 @@
                 </div>
                 <h3>Leave a comment:</h3>
                 <p>Posting as: {{ user.username }}</p>
-                <form method="post" style="margin-top: 1.3em;">
+                <form method="post">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
                     <button type="submit" class="button">Submit</button>
@@ -120,7 +120,7 @@
                 {% if user.is_authenticated %}
                 <h3>Leave a comment:</h3>
                 <p>Posting as: {{ user.username }}</p>
-                <form method="post" style="margin-top: 1.3em;">
+                <form method="post">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
                     <button type="submit" class="button">Submit</button>

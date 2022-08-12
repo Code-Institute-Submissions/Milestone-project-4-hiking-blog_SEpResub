@@ -14,14 +14,14 @@
                         <div >
                             <div class="image-container">
 
-                                <img class="card-img" src=" {{ post.featured_image.url }}">
+                                <img class="card-img" src=" {{ post.featured_image.url }}" alt="Cover image">
                                 <div class="card-img-overlay text-white d-flex flex-column justify-content-end">
                                         <h2 class="card-title card-content-style">{{ post.title }}</h2>
 
                                         <p class="author card-content-style">Author: {{ post.author }}</p>
                                         <a href="{% url 'post_detail' post.slug  %}" class="card-content-style button">Read More &rarr;</a>
                                     
-                                        <p class="likes" class="card-content-style" ><i class="far fa-heart likes"></i>
+                                        <p class="like card-content-style" ><i class="far fa-heart likes"></i>
                                             {{ post.number_of_likes }}</p>
                                 </div>
                                 

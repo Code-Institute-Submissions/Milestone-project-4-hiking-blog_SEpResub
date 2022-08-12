@@ -127,16 +127,16 @@ HikeIt is a blog for hikers and adventures people who likes to travel and would 
   - Django-Copyright
 
 - Tools for design
- - Coolors
- - Font Awsome
- - Google Fonts
+  - Coolors
+  - Font Awsome
+  - Google Fonts
 
 
-Cloud storage and deployment services
+- Cloud storage and deployment services
 
-    Cloudinary
-    Heroku
-    Gunicorn
+  - Cloudinary
+  -  Heroku
+  -  Gunicorn
 
 
   ## Testing 
