@@ -19,14 +19,13 @@ class PostList(generic.ListView):
     paginate_by = 6
 
 
-
 class AboutView(TemplateView):
     """ Rendering about page """
     template_name = 'about.html'
 
 
 class PostDetail(View):
-    
+
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
@@ -46,7 +45,7 @@ class PostDetail(View):
                 "comment_form": CommentForm(),
             },
         )
-    
+
     def post(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
@@ -94,7 +93,7 @@ class CommentDeleteView(DeleteView):
 
 
 class PostLike(View):
-    
+
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():
