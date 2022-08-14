@@ -17,3 +17,5 @@ urlpatterns = [
         views.CommentDeleteView.as_view(),
         name='comment_delete'),
     ]
+
+handler404 = 'blog.views.error_404'
