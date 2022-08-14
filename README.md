@@ -1,6 +1,6 @@
 # HikeIt Django Full Stack Portfolio Project!
 HikeIt is a blog for hikers and adventures people who likes to travel and would like to get up and see the amazing views from different mountains around the world. The blog is designed to inspire and inform about hiking. The content covers tips and practical information for hiking in general and different specific places. The users are also supposed to engage with the blog. That is why the users can like and comment the different posts so that they can share useful information and show other users and the administrator what content they like.
-## Site link goes here.
+## https://myhikeblog.herokuapp.com/
 
 ## Design Thinking
 
@@ -36,7 +36,7 @@ HikeIt is a blog for hikers and adventures people who likes to travel and would 
 
 ## Agile Methodology
 
-- When developing this webapplication I used Agile Methodology. I planned my work based on user stories and a project board where I gave them a status of todo, in progress or done. All this was made in GitHub projects. During this project I had a tight deadline and when we work with agile as methodology we never comprimise time or quality but the scope. The features I did not get to do now I added as "future features" in the project board. Check it out here: https://github.com/users/EmanuelGustafzon/projects/4/views/1.
+- When developing this webapplication I used Agile Methodology. I planned my work based on user stories and a project board where I gave them a status of todo, in progress or done. All this was made in GitHub projects. During this project I had a tight deadline and when we work with agile as methodology we never comprimise time or quality but the scope. The features I did not get to do now I added as "future features" in the project board. Check it out here: https://github.com/users/EmanuelGustafzon/projects/4
 
  ## Blog Features 
 
@@ -142,7 +142,7 @@ HikeIt is a blog for hikers and adventures people who likes to travel and would 
 
   ## Testing 
  - Chrome developer tool was used to check the accessibility etc. 
-![Lighthouse test](/assets/images/IMG-2453.PNG)
+![Lighthouse test](/assets/images/IMG-2453.jpg)
 
  - The blog is validated by jigsaw.w3.org, validator.w3.org and pep8.
  - OBS: In the HTML validator for the detail page there is two errors but it is not my code but the code from django when a blogpost is created from the admin penal.
