@@ -71,12 +71,13 @@
     </footer>
     <script src="https://kit.fontawesome.com/d055bf150c.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <!-- makes messages dissapear after 3000ms -->
     <script>
       setTimeout(function () {
           let messages = document.getElementById('msg');
           let alert = new bootstrap.Alert(messages);
           alert.close();
-      }, 2500);
+      }, 3000);
   </script>
   </body>
 </html>

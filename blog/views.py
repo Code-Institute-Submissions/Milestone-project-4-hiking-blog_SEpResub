@@ -13,6 +13,8 @@ from .forms import CommentForm
 
 
 class PostList(generic.ListView):
+    """Rendering blog posts on index.html with 6 posts 
+    on each page."""
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'index.html'
@@ -25,7 +27,7 @@ class AboutView(TemplateView):
 
 
 class PostDetail(View):
-
+    """Rendering post detail page """
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
@@ -47,6 +49,8 @@ class PostDetail(View):
         )
 
     def post(self, request, slug, *args, **kwargs):
+        """Render likes and comments on each post"""
+
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by("-created_on")
@@ -93,7 +97,7 @@ class CommentDeleteView(DeleteView):
 
 
 class PostLike(View):
-
+    """Like a post"""
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():
@@ -105,6 +109,7 @@ class PostLike(View):
 
 
 def error_404(request, exception):
+        """404 page if the page is not found."""
         data = {}
         return render(request,'template/404.html', data)
 
