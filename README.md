@@ -85,14 +85,17 @@ HikeIt is a blog for hikers and adventures people who likes to travel and would 
  ![feature pegnation next](/assets/images/IMG-2437.jpg)
  ![feature pegnation prev](/assets/images/IMG-2433.jpg)
 
+   - 404 error page.
+
+ ![feature 404 page.](/assets/images/97248.jpg)
+
+
  ## Admin Features 
 
    - post a blog post from admin pannel.
 
  ![feature post](/assets/images/IMG-2449.PNG)
  ![feature post](/assets/images/IMG-2450.PNG)
-
-
  
 
    - Approve and delete comments.
@@ -141,7 +144,7 @@ HikeIt is a blog for hikers and adventures people who likes to travel and would 
 
 
   ## Testing 
- - Chrome developer tool was used to check the accessibility etc. 
+ - Chrome developer tool was used to check the accessibility, seo, performance and best practices. The reason why the performance is quite low is because of cloudinery because the size of the images is small, 626 x 418 px.
 ![Lighthouse test](/assets/images/IMG-2453.jpg)
 
  - The blog is validated by jigsaw.w3.org, validator.w3.org and pep8.
