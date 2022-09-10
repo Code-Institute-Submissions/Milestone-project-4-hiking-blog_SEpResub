@@ -33,6 +33,14 @@
                 <p class="card-text ">
                     {{ post.content | safe }}
                 </p>
+                <hr>
+                <h3>Practical Information</h3>
+                    <p>Country: <strong>{{ post.country | safe }}</strong></p>
+                    <p>City: <strong>{{ post.city | safe }}</strong></p>
+                    <p>Height over the sea: <strong>{{ post.height_over_sea | safe }}</strong></p>
+                    <p>Difficulty: <strong>{{ post.difficulty_level | safe }}</strong></p> 
+                
+
                 <div class="row">
 
                     <div class="col-2 col-lg-1">

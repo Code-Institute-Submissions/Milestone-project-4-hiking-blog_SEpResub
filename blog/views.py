@@ -9,7 +9,7 @@ from django.http import HttpResponseRedirect
 from .models import Post
 from .models import Comment
 from .forms import CommentForm
-
+from django.contrib.auth.decorators import login_required
 
 
 class PostList(generic.ListView):
@@ -82,6 +82,7 @@ class PostDetail(View):
         )
 
 
+# @login_required(redirect_field_name='my_redirect_field')
 class CommentUpdateView(UpdateView):
     """View to update a comment"""
     model = Comment
@@ -89,6 +90,7 @@ class CommentUpdateView(UpdateView):
     success_url = reverse_lazy('home')
 
 
+# @login_required(redirect_field_name='my_redirect_field')
 class CommentDeleteView(DeleteView):
     """View to delete a comment"""
     model = Comment
@@ -109,7 +111,8 @@ class PostLike(View):
 
 
 def error_404(request, exception):
-        """404 page if the page is not found."""
-        data = {}
-        return render(request,'template/404.html', data)
+    """404 page if the page is not found."""
+    data = {}
+    return render(request,'template/404.html', data)
+
 
