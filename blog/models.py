@@ -17,18 +17,33 @@ class Post(models.Model):
     featured_image = CloudinaryField('image', default='placeholder')
     content = models.TextField()
     country = models.CharField(max_length=50, blank=True)
-    city = models.CharField(max_length=50, blank=True)
+    city_name_of_place = models.CharField(max_length=50, blank=True)
     height_over_sea = models.IntegerField(blank=True, default=0)
     DIFFICULTY_CHOICES = [
-        ('HARD', 'hard'),
-        ('MEDIUM', 'medium'),
-        ('EASY', 'easy'),
+        ('hard', 'hard'),
+        ('medium', 'medium'),
+        ('easy', 'easy'),
         ]
     difficulty_level = models.CharField(
         max_length=20,
         choices=DIFFICULTY_CHOICES,
+        blank=True,
         null=True
+
     )
+    SEASON_CHOICES = [
+        ('January - Mars', 'January - Mars'),
+        ('April - June', 'April - June'),
+        ('July - September', 'July - September'),
+        ('October - December', 'October - December'),
+        ]
+    best_season = models.CharField(
+        max_length=20,
+        choices=SEASON_CHOICES,
+        null=True,
+        blank=True
+    )
+
     updated_on = models.DateTimeField(auto_now=True)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
