@@ -29,7 +29,6 @@ class Post(models.Model):
         choices=DIFFICULTY_CHOICES,
         blank=True,
         null=True
-
     )
     SEASON_CHOICES = [
         ('January - Mars', 'January - Mars'),
@@ -43,7 +42,6 @@ class Post(models.Model):
         null=True,
         blank=True
     )
-
     updated_on = models.DateTimeField(auto_now=True)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
