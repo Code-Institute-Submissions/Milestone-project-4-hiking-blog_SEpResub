@@ -2,6 +2,10 @@
 HikeIt is a blog for hikers and adventures people who likes to travel and would like to get up and see the amazing views from different mountains around the world. The blog is designed to inspire and inform about hiking. The content covers tips and practical information for hiking in general and different specific places. The users are also supposed to engage with the blog. That is why the users can like and comment the different posts so that they can share useful information and show other users and the administrator what content they like.
 ## https://myhikeblog.herokuapp.com/
 
+## Database structure
+
+ ![Database](/assets/images/database.jpg)
+
 ## Design Thinking
 
  - Purpose of the blog
@@ -126,7 +130,6 @@ HikeIt is a blog for hikers and adventures people who likes to travel and would 
 
 - Django Extentions
   - Allauth
-  - Summernote
   - Django-Crispyforms
   - Django-Copyright
 
@@ -144,22 +147,21 @@ HikeIt is a blog for hikers and adventures people who likes to travel and would 
 
 
   ## Testing 
- - Chrome developer tool was used to check the accessibility, seo, performance and best practices. The reason why the performance is quite low is because of cloudinery because the size of the images is small, 626 x 418 px.
-![Lighthouse test](/assets/images/IMG-2453.jpg)
+ - Chrome developer tool was used to check the accessibility, seo, performance and best practices.
+![Lighthouse test](/assets/images/lighthouse.png)
 
  - The blog is validated by jigsaw.w3.org, validator.w3.org and pep8.
  - OBS: In the HTML validator for the detail page there is two errors but it is not my code but the code from django when a blogpost is created from the admin penal.
 
  - Manuel testing was done:
-   - Test all links.
-   - Test like button
-   - Test Comment field
-     - User need to be logged in to comment
-     - Comments needs to be approved.
-     - User can edit and delete their own comments but not somebody elses.
-   - Test signup form
-   - Test Login form
-   - Test Logout form.
+   - Test all links, home, blogostdetail, about, update and delete comment, login, register and logout page.
+   - Test like button so users can like and unlike.
+   - Test Comment field so users can comment on posts.
+   - Test so that users need to be logged in to comment and like.
+   - Test that comments needs to be approved before shown to the public.
+   - Test that user can edit and delete their own comments but not somebody elses.
+   - Test that only the owner of a comment can update and delete the comment.
+   - Test so users can login, signup and signout without errors.
 
 - Automatic Testing
   - This is an area that needs to improve but four tests is done.
@@ -173,7 +175,9 @@ HikeIt is a blog for hikers and adventures people who likes to travel and would 
 
   ## Bugs along the way.
 
-- One major bug that I had was to set up for the automatic tests. The problem was that the tests needed to be done while connected to SQLite and not PostgreSQL. One way to solve this was to use the SQLite database when developing and PostgreSQL for the deployed site. This could be done with a if else statement in settings.py
+- One major bug that I had was to set up for the automatic tests. The problem was that the tests needed to be done while connected to SQLite and not PostgreSQL. One way to solve this was to use the SQLite database when developing and PostgreSQL for the deployed site. This could be done with a if else statement in settings.py.
+- Summernotes is using css in the html code wich lead to a errors in the html validation. This was solved by deleting summernotes.
+- Unauthoritised users could update and delete comments. This was used by using a if user == owner statement in the templates. 
 
   ## Deployment 
 
